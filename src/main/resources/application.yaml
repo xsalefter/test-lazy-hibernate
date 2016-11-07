@@ -1,0 +1,10 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+  datasource:
+    username: sa
+    password: sa
+
+logging.level.org.hibernate:
+  SQL: DEBUG
