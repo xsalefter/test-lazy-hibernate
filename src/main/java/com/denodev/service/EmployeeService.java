@@ -4,6 +4,7 @@ import com.denodev.dao.EmployeeRepository;
 import com.denodev.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author Arnaud DENOYELLE
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
  *         Le 07 nov. 2016
  */
 @Service
+@Transactional
 public class EmployeeService {
 
   @Autowired
