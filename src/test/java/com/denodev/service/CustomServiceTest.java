@@ -37,4 +37,11 @@ public class CustomServiceTest {
         this.employeeService.loadByCompanyId(42);
         System.out.println("=== Run EmployeeService#findEmployeesByCompanyId() end");
     }
+
+    @Test
+    public void employeeService_findByCompanyIdUsingQuery() {
+    	System.out.println("=== Run EmployeeService#findByCompanyIdUsingQuery() start");
+        this.employeeService.findByCompanyIdUsingQuery(42);
+        System.out.println("=== Run EmployeeService#findByCompanyIdUsingQuery() end");
+    }
 }

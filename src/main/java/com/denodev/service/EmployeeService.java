@@ -33,4 +33,8 @@ public class EmployeeService {
   public void loadByCompanyId(Integer companyId) {
     employeeRepository.findByCompanyId(companyId);
   }
+
+  public void findByCompanyIdUsingQuery(Integer companyId) {
+	employeeRepository.findByCompanyIdUsingQuery(companyId);
+  }
 }
