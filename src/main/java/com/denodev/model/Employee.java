@@ -15,7 +15,7 @@ public class Employee {
   private Integer id;
   private String name;
   private String surname;
-  @ManyToOne
+  @ManyToOne(fetch = FetchType.LAZY)
   private Company company;
 
   public Employee() {

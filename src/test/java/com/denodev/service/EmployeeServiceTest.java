@@ -11,10 +11,10 @@ import com.denodev.MyApplication;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = MyApplication.class)
-public class CustomServiceTest {
+public class EmployeeServiceTest {
 
     @Autowired
-    private CustomService customService;
+    private EmployeeService employeeService;
 
     @Autowired
     private CompanyService companyService;
@@ -26,10 +26,9 @@ public class CustomServiceTest {
 	}
 
     @Test
-    public void customService_findEmployeesByCompanyId() {
-        System.out.println("=== Run CustomService#findEmployeesByCompanyId() start");
-        this.customService.findEmployeesByCompanyId(42);
-        System.out.println("=== Run CustomService#findEmployeesByCompanyId() end");
+    public void employeeService_findEmployeesByCompanyId() {
+    	System.out.println("=== Run EmployeeService#findEmployeesByCompanyId() start");
+        this.employeeService.findByCompanyIdUsingQuery(42);
+        System.out.println("=== Run EmployeeService#findEmployeesByCompanyId() end");
     }
-
 }
