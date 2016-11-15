@@ -1,5 +1,7 @@
 package com.denodev.service;
 
+import java.text.ParseException;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,7 +22,7 @@ public class CustomServiceTest {
     private CompanyService companyService;
 
 	@Before
-	public void before() {
+	public void before() throws ParseException {
         System.out.println("Run before every test is running.");
         this.companyService.init();
 	}

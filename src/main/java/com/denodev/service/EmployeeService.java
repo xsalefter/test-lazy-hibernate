@@ -2,6 +2,10 @@ package com.denodev.service;
 
 import com.denodev.dao.EmployeeRepository;
 import com.denodev.model.Employee;
+
+import java.util.Date;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -36,5 +40,9 @@ public class EmployeeService {
 
   public void findByCompanyIdUsingQuery(Integer companyId) {
 	employeeRepository.findByCompanyIdUsingQuery(companyId);
+  }
+
+  public List<Employee> findByBirthDate(Date date) {
+    return this.employeeRepository.findEmployeeDataByBirthDate(date);
   }
 }
