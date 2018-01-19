@@ -54,6 +54,9 @@ public class MediaAnalysisRepositoryTest {
 
         Optional<MediaAnalysis> mediaAnalysis = this.mediaAnalysisRepository.getByMedia(criteria);
         assertTrue(mediaAnalysis.get() != null);
+        assertTrue(mediaAnalysis.get().getContent().equals("This is success content for media1"));
+        assertTrue(mediaAnalysis.get().getMedia().equals(criteria));
+        assertTrue(mediaAnalysis.get().getMedia().getAuthor().equals("author 1"));
         
         System.out.println("---------- END OF GENERATED QUERY HERE ----------");
     }
